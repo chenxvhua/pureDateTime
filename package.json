@@ -1,0 +1,19 @@
+{
+  "name": "puredatetime",
+  "version": "1.0.0",
+  "description": "日期工具类",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenxvhua/pureDateTime.git"
+  },
+  "author": "kenley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenxvhua/pureDateTime/issues"
+  },
+  "homepage": "https://github.com/chenxvhua/pureDateTime#readme"
+}
