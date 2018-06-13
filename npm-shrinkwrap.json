@@ -1,0 +1,13 @@
+{
+  "name": "puredatetime",
+  "version": "1.0.14",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "format-datetime": {
+      "version": "1.0.2",
+      "resolved": "https://registry.npmjs.org/format-datetime/-/format-datetime-1.0.2.tgz",
+      "integrity": "sha1-2PQr68vhAce8P88ZujMvdOEDQ4E="
+    }
+  }
+}
