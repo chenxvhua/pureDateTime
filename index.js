@@ -1,3 +1,4 @@
+var one=require("format-datetime")
 function analyzeDateObj(dateObj){
     if(Object.prototype.toString(dateObj) !=="[object Date]"){
         if(!isNaN(dateObj)){ //毫秒格式如：1526583661111
