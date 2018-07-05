@@ -1,6 +1,6 @@
 var pureDateTime = require("./index.js");
 
-var d = new Date("2018-5-18 03:1:1:111");
+var d = new Date(2018,5,18,3,1,1,111);
 console.log(d.getTime())
 
 var dateStr = pureDateTime.formatDate(d,"yyyy-MM-dd HH:mm:ss 第q季"); //24小时，所有是H

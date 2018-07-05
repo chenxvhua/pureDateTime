@@ -1,18 +1,10 @@
 {
   "name": "puredatetime",
-  "version": "1.0.18",
+  "version": "1.0.31",
   "description": "日期工具类",
   "main": "index.js",
   "scripts": {
-    "prerestart": "node prerestart.js",
-    "prestop": "",
-    "stop": "node stop.js",
-    "poststop": "",
-    "restart": "node test.js",
-    "prestart": "",
-    "start": "",
-    "poststart": "",
-    "postrestart": ""
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
@@ -23,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/chenxvhua/pureDateTime/issues"
   },
-  "homepage": "https://github.com/chenxvhua/pureDateTime#readme",
-  "dependencies": {
-    "format-datetime": "1.0.2"
-  }
+  "homepage": "https://github.com/chenxvhua/pureDateTime#readme"
 }

@@ -1,4 +1,4 @@
-var one=require("format-datetime")
+
 function analyzeDateObj(dateObj){
     if(Object.prototype.toString(dateObj) !=="[object Date]"){
         if(!isNaN(dateObj)){ //毫秒格式如：1526583661111
@@ -7,13 +7,13 @@ function analyzeDateObj(dateObj){
         else{
             var regLong=/(\d{4})-(\d{1,2})-(\d{1,2}) (\d{1,2}):(\d{1,2}):(\d{1,2})/
             var regShort=/(\d{4})-(\d{1,2})-(\d{1,2})/
-            var arr=regLong.exec(dateStr)
+            var arr=regLong.exec(dateObj)
             if(!arr){
-                arr=regShort.exec(dateStr)
+                arr=regShort.exec(dateObj)
             }
             if(arr){
                 arr.shift()
-                dateObj=arr.length===3?new Date(arr[0],arr[1],arr[2]):new Date(arr[0],arr[1],arr[2],arr[3],arr[4],arr[5])
+                dateObj=arr.length===3?new Date(arr[0],arr[1]-1,arr[2]):new Date(arr[0],arr[1]-1,arr[2],arr[3],arr[4],arr[5])
             }
             else{
                 dateObj=null;
@@ -53,7 +53,6 @@ function formatDate(dateObj,format) {  
 
 //根据日期或者日期字符串返回日期所有特性,异常返回null
 function dateObject(dateObj) {
-    var dateObj=null;
     if(dateObj){
         dateObj=analyzeDateObj(dateObj)
     }
@@ -65,13 +64,13 @@ function dateObject(dateObj) {
         return null;
     }
     var o = {
-        "M": dateObj.getMonth() + 1, //月份  
+        "y": dateObj.getFullYear(), //月份  
+        "M": dateObj.getMonth(), //月份  
         "d": dateObj.getDate(), //日  
         "h": dateObj.getHours() % 12 == 0 ? 12 : dateObj.getHours() % 12, //小时
         "H": dateObj.getHours(), //小时  
         "m": dateObj.getMinutes(), //分  
-        "s": dateObj.getSeconds(), //秒  
-        "q": Math.ceil((dateObj.getMonth() + 1) / 3) //季度 
+        "s": dateObj.getSeconds() //秒
     };
     return o;
 };
